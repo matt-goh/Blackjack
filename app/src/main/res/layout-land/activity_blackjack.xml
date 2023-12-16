@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blackjack">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/game_result"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        app:fontFamily="@font/raleway_medium" />
+
+    <ImageView
+        android:id="@+id/poker_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/poker_table"
+        app:tint="@color/white"
+        android:alpha="0.9"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBack"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/back"
+        android:alpha="0.2">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/card"
+            android:layout_width="123dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="119dp"
+            android:layout_marginLeft="230dp"
+            android:layout_gravity="end"
+            android:background="@drawable/card"/>
+
+        <ImageView
+            android:id="@+id/pcDrawn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center_horizontal"
+            app:tint="@color/white"
+            android:alpha="0.9"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/pc1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="start"
+            app:tint="@color/white"
+            android:alpha="0.9"/>
+
+        <ImageView
+            android:id="@+id/pc2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="120dp"
+            android:layout_toEndOf="@id/pc1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="end"
+            android:visibility="invisible"
+            app:tint="@color/white"
+            android:alpha="0.9"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pcSumDisplay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:textSize="22sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDraw"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/pcSumDisplay"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/game_button"
+        android:text="@string/drawcard"
+        app:fontFamily="@font/raleway_regular"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPass"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnDraw"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/game_button"
+        android:text="@string/pass"
+        app:fontFamily="@font/raleway_regular"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userSumDisplay"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnPass"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/userDrawn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/userSumDisplay"
+        android:layout_marginTop="50dp"
+        app:tint="@color/white"
+        android:alpha="0.9"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/user1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/userSumDisplay"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        app:tint="@color/white"
+        android:alpha="0.9"/>
+
+    <ImageView
+        android:id="@+id/user2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/userSumDisplay"
+        android:layout_toEndOf="@id/user1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        app:tint="@color/white"
+        android:alpha="0.9"/>
+
+</RelativeLayout>
